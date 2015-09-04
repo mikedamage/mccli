@@ -1,13 +1,12 @@
 {
-  "name": "memcached-util",
-  "description": "Quickly view stats and flush Memcached cache",
+  "name": "mccli",
+  "description": "Memcached command line interface",
   "version": "0.1.0",
   "private": true,
   "bin": {
     "mccli": "./index.js"
   },
   "dependencies": {
-    "lodash": "^3.10.1",
     "yargs": "^3.24.0"
   }
 }

@@ -4,7 +4,6 @@
  * Memcached Stats and Cache Flush Utility
  */
 
-var _    = require('lodash');
 var net  = require('net');
 var argv = require('yargs')
   .command('stats', 'Print usage statistics')
