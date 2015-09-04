@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "bin": {
-    "mc": "./index.js"
+    "mccli": "./index.js"
   },
   "dependencies": {
     "lodash": "^3.10.1",
