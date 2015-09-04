@@ -1,0 +1,13 @@
+{
+  "name": "memcached-util",
+  "description": "Quickly view stats and flush Memcached cache",
+  "version": "0.1.0",
+  "private": true,
+  "bin": {
+    "mc": "./index.js"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "yargs": "^3.24.0"
+  }
+}
