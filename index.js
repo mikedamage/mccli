@@ -20,7 +20,7 @@ var argv = require('yargs')
 var command = argv._[0];
 
 var client  = net.connect({ host: argv.server, port: 11211 }, function() {
-  console.log('Connected to local Memcached server');
+  console.log('Connected to Memcached server: %s', argv.server);
   client.write(command + "\n");
 });
 
