@@ -6,14 +6,20 @@
 
 var net  = require('net');
 var argv = require('yargs')
-  .command('stats', 'Print usage statistics')
-  .command('flush', 'Flush Memcached')
+  .usage('Usage: $0 [-s server_ip] COMMAND')
   .demand(1)
+  .option('s', {
+    alias: 'server',
+    description: 'Server address to connect to',
+    default: '127.0.0.1'
+  })
+  .help('h')
+  .alias('h', 'help')
   .argv;
 
 var command = argv._[0];
 
-var client  = net.connect({ port: 11211 }, function() {
+var client  = net.connect({ host: argv.server, port: 11211 }, function() {
   console.log('Connected to local Memcached server');
   client.write(command + "\n");
 });
